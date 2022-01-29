@@ -13,13 +13,28 @@ import { ref } from "vue";
       src="../assets/profile_pic.jpeg"
       height="400"
     />
-    <div class="basis-7/12 h-screen"></div>
+    <div class="basis-7/12 h-screen">
+      <div class="w-36 bg-rose-700 absolute profile-line"></div>
+      <div>
+        <p class="text-5xl">Kevin Tian</p>
+        <p class="text-rose-700">Developer</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et commodi
+          necessitatibus architecto debitis nesciunt repellendus.
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
 .profile-img {
   margin-left: 29%;
-  margin-top: 16%;
+  margin-top: 12%;
+}
+.profile-line {
+  height: 0.4rem;
+  margin-left: 7%;
+  margin-top: 28%;
 }
 </style>
