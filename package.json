@@ -1,5 +1,6 @@
 {
-  "name": "portfolio",
+  "name": "template",
+  "private": true,
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -7,14 +8,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vite-plugin-windicss": "^1.6.1",
-    "vue": "^3.2.25",
-    "windicss": "^3.4.2"
+    "vue": "^3.2.25"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^2.0.0",
-    "typescript": "^4.4.4",
-    "vite": "^2.7.2",
+    "@vitejs/plugin-vue": "^2.2.0",
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.7",
+    "prettier": "2.5.1",
+    "tailwindcss": "^3.0.23",
+    "typescript": "^4.5.4",
+    "vite": "^2.8.0",
     "vue-tsc": "^0.29.8"
   }
 }
