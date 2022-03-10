@@ -10,8 +10,52 @@ import SideNav from "./SideNav.vue";
       <Footer class="absolute bottom-0" />
     </div>
     <div class="w-7/12 h-screen relative flex justify-center items-center">
-      <div class="w-1/3">
-        <p class="text-4xl font-bold">About</p>
+      <div
+        class="about-section bg-pink-900 rounded shadow-xl absolute flex justify-center items-center"
+      >
+        <div class="text-white ml-4">
+          <div class="mb-8 flex">
+            <img
+              src="../assets/book.svg"
+              alt=""
+              width="24"
+              height="24"
+              title="education"
+            />
+            <div class="mx-4">
+              <p class="font-bold text-xl">Education</p>
+              <p>Cornell University</p>
+              <p>BS Computer Science</p>
+            </div>
+          </div>
+          <div class="my-14 flex">
+            <img
+              src="../assets/building.svg"
+              alt=""
+              width="24"
+              height="24"
+              title="building"
+            />
+            <div class="mx-4">
+              <p class="font-bold text-xl">Current Employment</p>
+              <p>IBM Quantum</p>
+              <p>Software Developer</p>
+            </div>
+          </div>
+          <div class="my-2 flex">
+            <img
+              src="../assets/resume.svg"
+              alt=""
+              width="24"
+              height="24"
+              title="resume"
+            />
+            <p class="font-bold text-xl mx-4">Resume</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-1/2">
+        <p class="text-5xl font-bold mb-4">About</p>
         <p class="text-xl">
           Hi! I'm Kevin, a recent graduate, currently working as a developer for
           IBM Quantum. I enjoy trying out different frontend frameworks to
@@ -26,4 +70,10 @@ import SideNav from "./SideNav.vue";
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.about-section {
+  width: 22rem;
+  height: 28rem;
+  left: -20%;
+}
+</style>

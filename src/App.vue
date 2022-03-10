@@ -12,7 +12,7 @@ import About from "./components/About.vue";
 
 <style>
 #app {
-  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
