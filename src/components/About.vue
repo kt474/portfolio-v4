@@ -2,6 +2,7 @@
 import Footer from "./Footer.vue";
 import Header from "./Header.vue";
 import SideNav from "./SideNav.vue";
+const page = ["main", "projects", "current"];
 </script>
 
 <template>
@@ -65,7 +66,7 @@ import SideNav from "./SideNav.vue";
         </p>
       </div>
       <Header class="absolute right-14 top-2" />
-      <SideNav class="absolute right-4 top-1/2" />
+      <SideNav :pages="page" class="absolute right-4 top-1/2" />
     </div>
   </div>
 </template>
