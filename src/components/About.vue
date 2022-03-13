@@ -2,6 +2,7 @@
 import Footer from "./Footer.vue";
 import Header from "./Header.vue";
 import SideNav from "./SideNav.vue";
+const headerLinks = ["Projects", "About", "Photos"];
 const page = ["main", "projects", "current"];
 </script>
 
@@ -65,7 +66,11 @@ const page = ["main", "projects", "current"];
           enjoy hiking, taking photos, and speedcubing.
         </p>
       </div>
-      <Header class="absolute right-14 top-2" />
+      <Header
+        :pages="headerLinks"
+        parent="About"
+        class="absolute right-14 top-2"
+      />
       <SideNav :pages="page" class="absolute right-4 top-1/2" />
     </div>
   </div>
