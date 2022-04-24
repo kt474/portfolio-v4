@@ -12,25 +12,61 @@ const page = ["main", "current", "about"];
     <div class="flex align-middle justify-center force-center">
       <div>
         <div class="flex">
-          <div class="w-72 h-56 bg-gray-100 mx-4">
+          <div class="w-80 h-64 bg-gray-100 mx-4">
             <a href="https://ktimer.app" target="_blank">
               <img src="../assets/ktimer.png" alt="ktimer" />
-              <div class="flex justify-center mt-3">
-                <a class="text-2xl">KTimer</a>
+              <div class="flex-col text-center justify-center mt-2">
+                <p class="text-2xl">KTimer</p>
+                <p class="text-lg">Modern speedcubing timer</p>
               </div>
             </a>
           </div>
-          <div class="w-72 h-56 bg-gray-300"></div>
+          <div class="w-80 h-64 bg-gray-300">
+            <img
+              class="mx-auto p-2"
+              src="../assets/undraw_1.svg"
+              width="240"
+              height="200"
+              alt="undraw-1"
+            />
+            <div class="flex-col text-center justify-center mt-3">
+              <p class="text-2xl">Coming Soon</p>
+            </div>
+          </div>
         </div>
         <div class="flex mt-4">
-          <div class="w-72 h-56 bg-gray-300 mx-4"></div>
-          <div class="w-72 h-56 bg-gray-100"></div>
+          <div class="w-80 h-64 bg-gray-300 mx-4">
+            <img
+              class="mx-auto p-2"
+              src="../assets/undraw_2.svg"
+              width="220"
+              height="180"
+              alt="undraw-2"
+            />
+            <div class="flex-col text-center justify-center mt-3">
+              <p class="text-2xl">Coming Soon</p>
+            </div>
+          </div>
+          <div class="w-80 h-64 bg-gray-100">
+            <img
+              class="mx-auto p-2"
+              src="../assets/undraw_3.svg"
+              width="250"
+              height="200"
+              alt="undraw-3"
+            />
+            <div class="flex-col text-center justify-center mt-2">
+              <p class="text-2xl">Coming Soon</p>
+            </div>
+          </div>
         </div>
         <div class="flex justify-center m-4">
           <button
             class="bg-rose-600 hover:bg-rose-700 text-white font-bold py-2 px-4 rounded"
           >
-            <a href="https://github.com/kt474" target="_blank">All Projects</a>
+            <a href="https://github.com/kt474?tab=repositories" target="_blank"
+              >All Projects</a
+            >
           </button>
         </div>
       </div>
@@ -54,7 +90,7 @@ const page = ["main", "current", "about"];
 .force-center {
   position: relative;
   top: 50%;
-  left: 15%;
+  left: 13%;
   transform: translateY(-50%);
 }
 </style>
