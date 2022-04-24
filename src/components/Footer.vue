@@ -3,11 +3,11 @@
 <template>
   <div class="text-white uppercase m-2">
     <div class="m-2">
-      <p class="text-2xl font-bold">Email</p>
+      <p class="text-2xl font-bold tracking-wide">Email</p>
       <a href="mailto:kt474@cornell.edu" class="text-xl">kt474@cornell.edu</a>
     </div>
-    <div class="m-2">
-      <p class="text-2xl font-bold">Socials</p>
+    <div class="m-2 mt-6">
+      <p class="text-2xl font-bold tracking-wide">Socials</p>
       <div class="flex w-40 justify-between my-1">
         <a href="https://www.linkedin.com/in/kt474/" target="_blank"
           ><img

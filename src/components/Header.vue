@@ -6,7 +6,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="flex justify-between w-72">
+  <div class="flex justify-between w-44">
     <p
       v-for="page in pages"
       class="text-xl font-bold"
