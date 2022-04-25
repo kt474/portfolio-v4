@@ -8,8 +8,8 @@ const page = ["main", "projects", "current"];
 
 <template>
   <div class="w-full h-screen relative about">
-    <Footer class="absolute bottom-0" />
-    <div class="flex justify-center items-center force-center">
+    <Footer class="hidden sm:block absolute bottom-0" />
+    <div class="flex flex-wrap justify-center items-center force-center">
       <div class="about-section bg-pink-900 rounded-lg shadow-xl">
         <img class="rounded-lg" src="../assets/cube.jpeg" alt="cube" />
         <div class="text-white ml-12">
@@ -21,7 +21,7 @@ const page = ["main", "projects", "current"];
               height="24"
               title="education"
             />
-            <div class="mx-4 mt-7">
+            <div class="mx-4 mt-4">
               <p class="font-bold text-xl">Education</p>
               <p>Cornell University</p>
               <p>BS Computer Science</p>
@@ -53,33 +53,37 @@ const page = ["main", "projects", "current"];
           </a>
         </div>
       </div>
-      <div class="w-1/3 ml-16">
-        <p class="text-5xl font-bold mb-4">About Me</p>
-        <p class="text-xl">
-          I'm a recent graduate currently working as a developer for
-          <a
-            class="text-blue-500"
-            href="https://quantum-computing.ibm.com/"
-            target="_blank"
-            >IBM Quantum</a
-          >. I enjoy working with different frontend frameworks to create web
-          apps. This website was made with Vite/Vue 3 and all of the source code
-          is
-          <a
-            class="text-blue-500"
-            href="https://github.com/kt474/portfolio-v4"
-            target="_blank"
-            >public</a
-          >
-          so feel free to take a look. In my free time I enjoy running, taking
-          photos, and
-          <a
-            class="text-blue-500"
-            href="https://youtu.be/OfMvZr38v1o"
-            target="_blank"
-            >speedcubing</a
-          >.
-        </p>
+      <div
+        class="w-80 md:w-1/3 -ml-10 sm:ml-16 h-80 flex flex-row sm:flex-col mt-3 sm:mt-0"
+      >
+        <p class="text-5xl font-bold mb-4 mr-8 sm:mr-0">About Me</p>
+        <div class="overflow-auto">
+          <p class="text-xl">
+            I'm a recent graduate currently working as a developer for
+            <a
+              class="text-blue-500"
+              href="https://quantum-computing.ibm.com/"
+              target="_blank"
+              >IBM Quantum</a
+            >. I enjoy working with different frontend frameworks to create web
+            apps. This website was made with Vite/Vue 3 and all of the source
+            code is
+            <a
+              class="text-blue-500"
+              href="https://github.com/kt474/portfolio-v4"
+              target="_blank"
+              >public</a
+            >
+            so feel free to take a look. In my free time I enjoy running, taking
+            photos, and
+            <a
+              class="text-blue-500"
+              href="https://youtu.be/OfMvZr38v1o"
+              target="_blank"
+              >speedcubing</a
+            >.
+          </p>
+        </div>
       </div>
     </div>
     <Header
@@ -96,8 +100,13 @@ const page = ["main", "projects", "current"];
   background: linear-gradient(to right, #be123c 40%, #fff 0%);
 }
 .about-section {
-  width: 22rem;
-  height: 32rem;
+  width: 21rem;
+  height: 30rem;
+}
+@media (max-width: 768px) {
+  .force-center {
+    left: 0 !important;
+  }
 }
 .force-center {
   position: relative;
