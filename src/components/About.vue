@@ -11,7 +11,7 @@ const page = ["main", "projects", "current"];
     <Footer class="absolute bottom-0" />
     <div class="flex justify-center items-center force-center">
       <div class="about-section bg-pink-900 rounded-lg shadow-xl">
-        <img class="rounded-lg" src="../assets/cube.jpeg" />
+        <img class="rounded-lg" src="../assets/cube.jpeg" alt="cube" />
         <div class="text-white ml-12">
           <div class="mb-8 flex">
             <img
@@ -21,7 +21,7 @@ const page = ["main", "projects", "current"];
               height="24"
               title="education"
             />
-            <div class="mx-4 mt-6">
+            <div class="mx-4 mt-7">
               <p class="font-bold text-xl">Education</p>
               <p>Cornell University</p>
               <p>BS Computer Science</p>
@@ -85,7 +85,7 @@ const page = ["main", "projects", "current"];
     <Header
       :pages="headerLinks"
       parent="About"
-      class="absolute right-14 top-2"
+      class="absolute right-4 top-2"
     />
     <SideNav :pages="page" class="absolute right-4 top-1/2" />
   </div>

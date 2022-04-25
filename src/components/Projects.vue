@@ -11,17 +11,17 @@ const page = ["main", "current", "about"];
     <Footer class="absolute bottom-0" />
     <div class="flex align-middle justify-center force-center">
       <div>
-        <div class="flex">
-          <div class="w-80 h-64 bg-gray-100 mx-4">
+        <div class="flex flex-col lg:flex-row">
+          <div class="w-60 h-48 lg:w-80 lg:h-64 bg-gray-100 mx-4">
             <a href="https://ktimer.app" target="_blank">
               <img src="../assets/ktimer.png" alt="ktimer" />
               <div class="flex-col text-center justify-center mt-2">
-                <p class="text-2xl">KTimer</p>
-                <p class="text-lg">Modern speedcubing timer</p>
+                <p class="text-base lg:text-2xl">KTimer</p>
+                <p class="text-sm lg:text-lg">Modern speedcubing timer</p>
               </div>
             </a>
           </div>
-          <div class="w-80 h-64 bg-gray-300">
+          <div class="w-60 h-48 lg:w-80 lg:h-64 bg-gray-300">
             <img
               class="mx-auto p-2"
               src="../assets/undraw_1.svg"
@@ -34,8 +34,8 @@ const page = ["main", "current", "about"];
             </div>
           </div>
         </div>
-        <div class="flex mt-4">
-          <div class="w-80 h-64 bg-gray-300 mx-4">
+        <div class="flex flex-col lg:flex-row mt-4">
+          <div class="w-60 h-48 lg:w-80 lg:h-64 bg-gray-300 mx-4">
             <img
               class="mx-auto p-2"
               src="../assets/undraw_2.svg"
@@ -47,7 +47,7 @@ const page = ["main", "current", "about"];
               <p class="text-2xl">Coming Soon</p>
             </div>
           </div>
-          <div class="w-80 h-64 bg-gray-100">
+          <div class="w-60 h-48 lg:w-80 lg:h-64 bg-gray-100">
             <img
               class="mx-auto p-2"
               src="../assets/undraw_3.svg"
@@ -74,7 +74,7 @@ const page = ["main", "current", "about"];
     <Header
       :pages="headerLinks"
       parent="Projects"
-      class="absolute right-14 top-2"
+      class="absolute right-4 top-2"
     />
     <SideNav :pages="page" class="absolute right-4 side-nav" />
   </div>
