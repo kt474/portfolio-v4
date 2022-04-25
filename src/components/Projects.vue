@@ -8,55 +8,49 @@ const page = ["main", "current", "about"];
 
 <template>
   <div class="w-full h-screen projects relative">
-    <Footer class="absolute bottom-0" />
+    <Footer class="hidden sm:block absolute bottom-0" />
     <div class="flex align-middle justify-center force-center">
       <div>
-        <div class="flex flex-col lg:flex-row">
-          <div class="w-60 h-48 lg:w-80 lg:h-64 bg-gray-100 mx-4">
+        <div class="flex flex-col md:flex-row">
+          <div class="w-60 h-48 lg:w-80 lg:h-64 bg-gray-100 mx-4 mb-4 md:mb-0">
             <a href="https://ktimer.app" target="_blank">
               <img src="../assets/ktimer.png" alt="ktimer" />
-              <div class="flex-col text-center justify-center mt-2">
+              <div class="flex-col text-center justify-center mt-1 lg:mt-2">
                 <p class="text-base lg:text-2xl">KTimer</p>
                 <p class="text-sm lg:text-lg">Modern speedcubing timer</p>
               </div>
             </a>
           </div>
-          <div class="w-60 h-48 lg:w-80 lg:h-64 bg-gray-300">
+          <div class="mx-auto w-60 h-48 lg:w-80 lg:h-64 bg-gray-300">
             <img
-              class="mx-auto p-2"
+              class="mx-auto p-2 w-48 lg:w-60"
               src="../assets/undraw_1.svg"
-              width="240"
-              height="200"
               alt="undraw-1"
             />
-            <div class="flex-col text-center justify-center mt-3">
-              <p class="text-2xl">Coming Soon</p>
+            <div class="flex-col text-center justify-center mt-1 lg:mt-3">
+              <p class="text-base lg:text-2xl">Coming Soon</p>
             </div>
           </div>
         </div>
-        <div class="flex flex-col lg:flex-row mt-4">
-          <div class="w-60 h-48 lg:w-80 lg:h-64 bg-gray-300 mx-4">
+        <div class="flex flex-col md:flex-row mt-4">
+          <div class="w-60 h-48 lg:w-80 lg:h-64 bg-gray-300 mx-4 mb-4 md:mb-0">
             <img
-              class="mx-auto p-2"
+              class="w-44 lg:w-56 mx-auto p-2"
               src="../assets/undraw_2.svg"
-              width="220"
-              height="180"
               alt="undraw-2"
             />
-            <div class="flex-col text-center justify-center mt-3">
-              <p class="text-2xl">Coming Soon</p>
+            <div class="flex-col text-center justify-center mt-1 lg:mt-2">
+              <p class="text-base lg:text-2xl">Coming Soon</p>
             </div>
           </div>
-          <div class="w-60 h-48 lg:w-80 lg:h-64 bg-gray-100">
+          <div class="mx-auto w-60 h-48 lg:w-80 lg:h-64 bg-gray-100">
             <img
-              class="mx-auto p-2"
+              class="w-48 lg:w-60 mx-auto p-2"
               src="../assets/undraw_3.svg"
-              width="250"
-              height="200"
               alt="undraw-3"
             />
-            <div class="flex-col text-center justify-center mt-2">
-              <p class="text-2xl">Coming Soon</p>
+            <div class="flex-col text-center justify-center mt-1 lg:mt-3">
+              <p class="text-base lg:text-2xl">Coming Soon</p>
             </div>
           </div>
         </div>
