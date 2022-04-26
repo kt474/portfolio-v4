@@ -1,4 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineProps({
+  darkMode: Boolean
+});
+</script>
 
 <template>
   <div class="text-white uppercase m-1 md:m-2">
@@ -16,14 +20,32 @@
           href="https://www.linkedin.com/in/kt474/"
           target="_blank"
           ><img
+            v-if="darkMode"
+            src="../assets/linkedin_dark.svg"
+            alt=""
+            width="24"
+            height="24"
+            title="Linkedin"
+          />
+          <img
+            v-else
             src="../assets/linkedin_icon.svg"
             alt=""
             width="24"
             height="24"
             title="Linkedin"
-        /></a>
+          />
+        </a>
         <a class="px-1" href="https://github.com/kt474" target="_blank"
           ><img
+            v-if="darkMode"
+            src="../assets/github_dark.svg"
+            alt=""
+            width="24"
+            height="24"
+            title="Github" />
+          <img
+            v-else
             src="../assets/github_icon.svg"
             alt=""
             width="24"
@@ -36,6 +58,15 @@
           target="_blank"
         >
           <img
+            v-if="darkMode"
+            src="../assets/instagram_dark.svg"
+            alt=""
+            width="24"
+            height="24"
+            title="Instagram"
+          />
+          <img
+            v-else
             src="../assets/instagram_icon.svg"
             alt=""
             width="24"
