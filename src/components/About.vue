@@ -41,7 +41,7 @@ const page = ["main", "projects", "current"];
               <p>Software Developer</p>
             </div>
           </div>
-          <a href="../assets/Resume.pdf" target="_blank" class="my-2 flex">
+          <a href="../../public/Resume.pdf" target="_blank" class="my-2 flex">
             <img
               src="../assets/resume.svg"
               alt=""
