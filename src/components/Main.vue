@@ -8,7 +8,7 @@ import { useStore } from "../store/store.js";
 import { onMounted, ref, watch } from "vue";
 const store = useStore();
 const checked = ref();
-const headerLinks = ["Projects", "About"];
+const headerLinks = ["Home", "Projects", "About"];
 const page = ["current", "projects", "about"];
 
 onMounted(() => {
@@ -26,6 +26,7 @@ watch(checked, () => {
 
 <template>
   <div
+    id="Home"
     class="w-full h-screen"
     :class="store.darkMode ? 'dark-background dark' : 'background'"
   >
@@ -75,7 +76,7 @@ watch(checked, () => {
     </div>
     <Header
       :pages="headerLinks"
-      parent="Main"
+      parent="Home"
       class="absolute right-4 top-2 dark:text-white"
     />
     <SideNav :pages="page" class="absolute right-4 side-nav" />

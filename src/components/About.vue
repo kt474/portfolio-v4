@@ -6,7 +6,7 @@ import SideNav from "./SideNav.vue";
 import { useStore } from "../store/store";
 import { computed } from "vue";
 const store = useStore();
-const headerLinks = ["Projects", "About"];
+const headerLinks = ["Home", "Projects", "About"];
 const page = ["main", "projects", "current"];
 
 const darkMode = computed(() => {
@@ -16,6 +16,7 @@ const darkMode = computed(() => {
 
 <template>
   <div
+    id="About"
     class="w-full h-screen relative"
     :class="darkMode ? 'dark-background dark' : 'background'"
   >
