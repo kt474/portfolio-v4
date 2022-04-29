@@ -2,14 +2,27 @@
 import Footer from "./Footer.vue";
 import Header from "./Header.vue";
 import SideNav from "./SideNav.vue";
+// @ts-ignore
+import { useStore } from "../store/store";
+import { computed } from "vue";
+const store = useStore();
 const headerLinks = ["Projects", "About"];
 const page = ["main", "projects", "current"];
+
+const darkMode = computed(() => {
+  return store.darkMode;
+});
 </script>
 
 <template>
-  <div class="w-full h-screen relative about">
-    <Footer class="hidden sm:block absolute bottom-0" />
-    <div class="flex flex-wrap justify-center items-center force-center">
+  <div
+    class="w-full h-screen relative"
+    :class="darkMode ? 'dark-background dark' : 'background'"
+  >
+    <Footer class="hidden sm:block absolute bottom-0 dark:text-neutral-900" />
+    <div
+      class="flex flex-wrap justify-center items-center force-center dark:text-white"
+    >
       <div class="about-section bg-pink-900 rounded-lg shadow-xl">
         <img class="rounded-lg" src="../assets/cube.jpeg" alt="cube" />
         <div class="text-white ml-12">
@@ -89,15 +102,18 @@ const page = ["main", "projects", "current"];
     <Header
       :pages="headerLinks"
       parent="About"
-      class="absolute right-4 top-2"
+      class="absolute right-4 top-2 dark:text-white"
     />
     <SideNav :pages="page" class="absolute right-4 top-1/2" />
   </div>
 </template>
 
 <style scoped>
-.about {
+.background {
   background: linear-gradient(to right, #be123c 40%, #fff 0%);
+}
+.dark-background {
+  background: linear-gradient(to right, #be123c 40%, #1e1e1e 0%);
 }
 .about-section {
   width: 21rem;

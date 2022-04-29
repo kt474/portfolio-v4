@@ -1,7 +1,7 @@
 <script setup lang="ts">
-defineProps({
-  darkMode: Boolean
-});
+// @ts-ignore
+import { useStore } from "../store/store.js";
+const store = useStore();
 </script>
 
 <template>
@@ -20,7 +20,7 @@ defineProps({
           href="https://www.linkedin.com/in/kt474/"
           target="_blank"
           ><img
-            v-if="darkMode"
+            v-if="store.darkMode"
             src="../assets/linkedin_dark.svg"
             alt=""
             width="24"
@@ -38,7 +38,7 @@ defineProps({
         </a>
         <a class="px-1" href="https://github.com/kt474" target="_blank"
           ><img
-            v-if="darkMode"
+            v-if="store.darkMode"
             src="../assets/github_dark.svg"
             alt=""
             width="24"
@@ -58,7 +58,7 @@ defineProps({
           target="_blank"
         >
           <img
-            v-if="darkMode"
+            v-if="store.darkMode"
             src="../assets/instagram_dark.svg"
             alt=""
             width="24"

@@ -3,14 +3,32 @@ import Footer from "./Footer.vue";
 import Header from "./Header.vue";
 import SideNav from "./SideNav.vue";
 import Logo from "./Logo.vue";
+// @ts-ignore
+import { useStore } from "../store/store.js";
+import { onMounted, ref, watch } from "vue";
+const store = useStore();
+const checked = ref();
 const headerLinks = ["Projects", "About"];
 const page = ["current", "projects", "about"];
-import { ref } from "vue";
-const checked = ref(false);
+
+onMounted(() => {
+  if (localStorage.darkMode) {
+    checked.value = JSON.parse(localStorage.darkMode);
+    store.updateDarkMode(checked.value);
+  }
+});
+
+watch(checked, () => {
+  localStorage.darkMode = checked.value;
+  store.updateDarkMode(checked.value);
+});
 </script>
 
 <template>
-  <div class="w-full h-screen" :class="checked ? 'dark-main dark' : 'main'">
+  <div
+    class="w-full h-screen"
+    :class="store.darkMode ? 'dark-background dark' : 'background'"
+  >
     <div class="w-full absolute top-3 left-14">
       <label for="toggleB" class="flex items-center cursor-pointer">
         <div class="relative">
@@ -28,10 +46,7 @@ const checked = ref(false);
       </label>
     </div>
     <Logo class="absolute top-0 dark:text-neutral-900" />
-    <Footer
-      class="absolute bottom-0 dark:text-neutral-900"
-      :dark-mode="checked"
-    />
+    <Footer class="absolute bottom-0 dark:text-neutral-900" />
     <div
       class="flex flex-wrap md:flex-nowrap align-middle justify-center force-center container"
     >
@@ -72,10 +87,10 @@ input:checked ~ .dot {
   transform: translateX(100%);
   background-color: #be123c;
 }
-.main {
+.background {
   background: linear-gradient(to right, #be123c 40%, #fff 0%);
 }
-.dark-main {
+.dark-background {
   background: linear-gradient(to right, #be123c 40%, #1e1e1e 0%);
 }
 

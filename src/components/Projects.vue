@@ -2,13 +2,25 @@
 import Footer from "./Footer.vue";
 import Header from "./Header.vue";
 import SideNav from "./SideNav.vue";
+
+// @ts-ignore
+import { useStore } from "../store/store";
+import { computed } from "vue";
+
 const headerLinks = ["Projects", "About"];
 const page = ["main", "current", "about"];
+const store = useStore();
+const darkMode = computed(() => {
+  return store.darkMode;
+});
 </script>
 
 <template>
-  <div class="w-full h-screen projects relative">
-    <Footer class="hidden sm:block absolute bottom-0" />
+  <div
+    class="w-full h-screen relative"
+    :class="darkMode ? 'dark-background dark' : 'background'"
+  >
+    <Footer class="hidden sm:block absolute bottom-0 dark:text-neutral-900" />
     <div class="flex align-middle justify-center force-center">
       <div>
         <div class="flex flex-col md:flex-row">
@@ -68,15 +80,18 @@ const page = ["main", "current", "about"];
     <Header
       :pages="headerLinks"
       parent="Projects"
-      class="absolute right-4 top-2"
+      class="absolute right-4 top-2 dark:text-white"
     />
     <SideNav :pages="page" class="absolute right-4 side-nav" />
   </div>
 </template>
 
 <style scoped>
-.projects {
+.background {
   background: linear-gradient(to right, #be123c 30%, #fff 0%);
+}
+.dark-background {
+  background: linear-gradient(to right, #be123c 30%, #1e1e1e 0%);
 }
 .side-nav {
   top: 45%;
