@@ -2,7 +2,6 @@
 import Footer from "./Footer.vue";
 import Header from "./Header.vue";
 import SideNav from "./SideNav.vue";
-import Logo from "./Logo.vue";
 // @ts-ignore
 import { useStore } from "../store/store.js";
 import { onMounted, ref, watch } from "vue";
@@ -30,7 +29,7 @@ watch(checked, () => {
     class="w-full h-screen"
     :class="store.darkMode ? 'dark-background dark' : 'background'"
   >
-    <div class="w-full absolute top-3 left-14">
+    <div class="w-full absolute top-3 left-3.5">
       <label for="toggleB" class="flex items-center cursor-pointer">
         <div class="relative">
           <input
@@ -39,14 +38,29 @@ watch(checked, () => {
             id="toggleB"
             class="sr-only"
           />
-          <div class="block bg-neutral-900 w-10 h-6 rounded-full"></div>
           <div
-            class="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition"
+            class="block bg-neutral-50 dark:bg-neutral-900 w-10 h-6 rounded-full"
           ></div>
+          <div
+            class="dot absolute left-1 top-1 bg-rose-700 w-4 h-4 rounded-full transition"
+          ></div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 absolute left-12 -top-0.5"
+            fill="none"
+            viewBox="0 0 24 24"
+            :stroke="store.darkMode ? '#171717' : '#fff'"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+            />
+          </svg>
         </div>
       </label>
     </div>
-    <Logo class="absolute top-0 dark:text-neutral-900" />
     <Footer class="absolute bottom-0 dark:text-neutral-900" />
     <div
       class="flex flex-wrap md:flex-nowrap align-middle justify-center force-center container"
