@@ -104,7 +104,7 @@ const darkMode = computed(() => {
   background: linear-gradient(to right, #be123c 30%, #1e1e1e 0%);
 }
 .side-nav {
-  top: 42%;
+  top: 41%;
 }
 .force-center {
   position: relative;

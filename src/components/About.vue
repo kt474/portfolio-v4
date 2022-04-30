@@ -78,7 +78,7 @@ const darkMode = computed(() => {
         >
           About Me
         </p>
-        <div class="overflow-auto">
+        <div>
           <p class="text-base sm:text-xl">
             I'm a recent graduate currently working as a developer for
             <a

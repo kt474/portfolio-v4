@@ -83,7 +83,9 @@ watch(checked, () => {
             <p class="my-2">Tian</p>
           </div>
           <div class="">
-            <p class="text-xl sm:text-2xl w-12 sm:w-72 font-bold text-rose-700">
+            <p
+              class="-mt-1 sm:mt-0 text-xl sm:text-2xl w-12 sm:w-72 font-bold text-rose-700"
+            >
               Software Developer
             </p>
             <p
@@ -135,6 +137,13 @@ input:checked ~ .dot {
 @media (max-width: 1024px) {
   .profile-img {
     width: 275px !important;
+  }
+}
+@media only screen and (min-width: 834px) and (max-width: 1194px) {
+  .profile-img {
+    width: 325px !important;
+    margin-left: 34vw !important;
+    margin-bottom: 4rem;
   }
 }
 .profile-img {
