@@ -6,7 +6,7 @@ const store = useStore();
 
 <template>
   <div class="text-white uppercase m-1 md:m-2">
-    <div class="m-0 md:m-2">
+    <div class="hidden sm:block m-0 md:m-2">
       <p class="text-md md:text-2xl font-bold tracking-wide">Email</p>
       <a href="mailto:kt474@cornell.edu" class="text-sm md:text-xl"
         >kt474@cornell.edu</a

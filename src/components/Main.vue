@@ -8,9 +8,15 @@ import { onMounted, ref, watch } from "vue";
 const store = useStore();
 const checked = ref();
 const headerLinks = ["Home", "Projects", "About"];
+const systemDarkMode = window.matchMedia(
+  "(prefers-color-scheme: dark)"
+).matches;
 
 onMounted(() => {
-  if (localStorage.darkMode) {
+  if (systemDarkMode && !localStorage.darkMode) {
+    checked.value = true;
+    store.updateDarkMode(true);
+  } else if (localStorage.darkMode) {
     checked.value = JSON.parse(localStorage.darkMode);
     store.updateDarkMode(checked.value);
   }
