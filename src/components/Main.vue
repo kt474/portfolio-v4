@@ -89,7 +89,7 @@ watch(checked, () => {
               Software Developer
             </p>
             <p
-              class="text-xl sm:text-2xl w-48 md:w-96 mt-2 sm:mt-4 dark:text-white"
+              class="text-xl sm:text-2xl w-48 md:w-96 mt-0 sm:mt-4 dark:text-white"
             >
               Hi i'm Kevin - a developer, designer, and photographer
             </p>

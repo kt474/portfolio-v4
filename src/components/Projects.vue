@@ -23,6 +23,11 @@ const darkMode = computed(() => {
     <Footer class="hidden sm:block absolute bottom-0 dark:text-neutral-900" />
     <div class="flex align-middle justify-center force-center">
       <div>
+        <p
+          class="text-4xl sm:text-5xl font-bold mx-4 mb-3 sm:mb-12 dark:text-white"
+        >
+          Projects
+        </p>
         <div class="flex flex-col md:flex-row">
           <div
             class="w-56 h-40 md:w-60 md:h-48 lg:w-80 lg:h-64 bg-gray-100 mx-4 mb-2 md:mb-0"
@@ -76,7 +81,7 @@ const darkMode = computed(() => {
             </div>
           </div>
         </div>
-        <div class="flex justify-center m-4">
+        <div class="hidden sm:flex justify-center m-4 pb-2">
           <button
             class="bg-rose-600 hover:bg-rose-700 text-white font-bold py-2 px-4 rounded"
           >
@@ -104,7 +109,7 @@ const darkMode = computed(() => {
   background: linear-gradient(to right, #be123c 30%, #1e1e1e 0%);
 }
 .side-nav {
-  top: 41%;
+  top: 47%;
 }
 .force-center {
   position: relative;
