@@ -1,18 +1,66 @@
 <script setup lang="ts">
+import { onMounted, ref } from "vue";
 defineProps({
-  pages: Array
+  parent: String
+});
+
+const initialShow = ref(false);
+
+onMounted(() => {
+  setTimeout(() => (initialShow.value = true), 500);
 });
 </script>
 
 <template>
-  <div>
+  <div v-if="parent === 'main'" :class="initialShow ? 'show-div' : 'hidden'">
     <div
-      v-for="page in pages"
-      class="w-4 h-4 rounded-full my-2 hide-nav"
-      :class="{
-        'bg-rose-700': page === 'current',
-        'bg-rose-300': page !== 'current'
-      }"
+      v-motion-pop-visible
+      :delay="1000"
+      class="w-4 h-4 rounded-full my-2 hide-nav bg-rose-700"
+    ></div>
+    <div
+      v-motion-roll-visible-left
+      :delay="400"
+      class="w-4 h-4 rounded-full my-2 hide-nav bg-rose-300"
+    ></div>
+    <div
+      v-motion-roll-visible-left
+      :delay="400"
+      class="w-4 h-4 rounded-full my-2 hide-nav bg-rose-300"
+    ></div>
+  </div>
+  <div v-else-if="parent === 'projects'">
+    <div
+      v-motion-roll-visible-left
+      :delay="400"
+      class="w-4 h-4 rounded-full my-2 hide-nav bg-rose-300"
+    ></div>
+    <div
+      v-motion-pop-visible
+      :delay="1000"
+      class="w-4 h-4 rounded-full my-2 hide-nav bg-rose-700"
+    ></div>
+    <div
+      v-motion-roll-visible-left
+      :delay="400"
+      class="w-4 h-4 rounded-full my-2 hide-nav bg-rose-300"
+    ></div>
+  </div>
+  <div v-else-if="parent === 'about'">
+    <div
+      v-motion-roll-visible-left
+      :delay="400"
+      class="w-4 h-4 rounded-full my-2 hide-nav bg-rose-300"
+    ></div>
+    <div
+      v-motion-roll-visible-left
+      :delay="400"
+      class="w-4 h-4 rounded-full my-2 hide-nav bg-rose-300"
+    ></div>
+    <div
+      v-motion-pop-visible
+      :delay="1000"
+      class="w-4 h-4 rounded-full my-2 hide-nav bg-rose-700"
     ></div>
   </div>
 </template>
@@ -22,5 +70,11 @@ defineProps({
   .hide-nav {
     display: none;
   }
+}
+.hidden {
+  visibility: hidden;
+}
+.show-div {
+  visibility: initial;
 }
 </style>

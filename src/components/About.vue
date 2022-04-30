@@ -7,7 +7,6 @@ import { useStore } from "../store/store";
 import { computed } from "vue";
 const store = useStore();
 const headerLinks = ["Home", "Projects", "About"];
-const page = ["main", "projects", "current"];
 
 const darkMode = computed(() => {
   return store.darkMode;
@@ -17,7 +16,7 @@ const darkMode = computed(() => {
 <template>
   <div
     id="About"
-    class="w-full h-screen relative"
+    class="h-screen relative"
     :class="darkMode ? 'dark-background dark' : 'background'"
   >
     <Footer class="hidden sm:block absolute bottom-0 dark:text-neutral-900" />
@@ -80,7 +79,7 @@ const darkMode = computed(() => {
               target="_blank"
               >IBM Quantum</a
             >. I enjoy working with different frontend frameworks to create web
-            apps. This website was made with Vite/Vue 3 and all of the source
+            apps. This website was made with Vue/Tailwind and all of the source
             code is
             <a
               class="text-blue-500"
@@ -105,7 +104,7 @@ const darkMode = computed(() => {
       parent="About"
       class="absolute right-4 top-2 dark:text-white"
     />
-    <SideNav :pages="page" class="absolute right-4 top-1/2" />
+    <SideNav parent="about" class="absolute right-4 side-nav" />
   </div>
 </template>
 
@@ -125,9 +124,12 @@ const darkMode = computed(() => {
     left: 0 !important;
   }
 }
+.side-nav {
+  top: 45%;
+}
 .force-center {
   position: relative;
-  left: 8%;
+  margin-left: 13%;
   top: 50%;
   transform: translateY(-50%);
 }

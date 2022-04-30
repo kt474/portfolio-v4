@@ -8,7 +8,6 @@ import { useStore } from "../store/store";
 import { computed } from "vue";
 
 const headerLinks = ["Home", "Projects", "About"];
-const page = ["main", "current", "about"];
 const store = useStore();
 const darkMode = computed(() => {
   return store.darkMode;
@@ -18,7 +17,7 @@ const darkMode = computed(() => {
 <template>
   <div
     id="Projects"
-    class="w-full h-screen relative"
+    class="h-screen relative"
     :class="darkMode ? 'dark-background dark' : 'background'"
   >
     <Footer class="hidden sm:block absolute bottom-0 dark:text-neutral-900" />
@@ -83,7 +82,7 @@ const darkMode = computed(() => {
       parent="Projects"
       class="absolute right-4 top-2 dark:text-white"
     />
-    <SideNav :pages="page" class="absolute right-4 side-nav" />
+    <SideNav parent="projects" class="absolute right-4 side-nav" />
   </div>
 </template>
 
@@ -95,12 +94,12 @@ const darkMode = computed(() => {
   background: linear-gradient(to right, #be123c 30%, #1e1e1e 0%);
 }
 .side-nav {
-  top: 45%;
+  top: 42%;
 }
 .force-center {
   position: relative;
+  margin-left: 27%;
   top: 50%;
-  left: 13%;
   transform: translateY(-50%);
 }
 </style>

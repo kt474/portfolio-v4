@@ -8,7 +8,6 @@ import { onMounted, ref, watch } from "vue";
 const store = useStore();
 const checked = ref();
 const headerLinks = ["Home", "Projects", "About"];
-const page = ["current", "projects", "about"];
 
 onMounted(() => {
   if (localStorage.darkMode) {
@@ -26,10 +25,10 @@ watch(checked, () => {
 <template>
   <div
     id="Home"
-    class="w-full h-screen"
+    class="h-screen"
     :class="store.darkMode ? 'dark-background dark' : 'background'"
   >
-    <div class="w-full absolute top-3 left-3.5">
+    <div class="absolute top-3 left-3.5">
       <label for="toggleB" class="flex items-center cursor-pointer">
         <div class="relative">
           <input
@@ -93,7 +92,7 @@ watch(checked, () => {
       parent="Home"
       class="absolute right-4 top-2 dark:text-white"
     />
-    <SideNav :pages="page" class="absolute right-4 side-nav" />
+    <SideNav parent="main" class="absolute right-4 side-nav" />
   </div>
 </template>
 
