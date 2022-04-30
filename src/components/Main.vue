@@ -77,16 +77,18 @@ watch(checked, () => {
         ></div>
         <div class="flex flex-row md:flex-col ml-10 md:ml-0 -mt-4 lg:mt-0">
           <div
-            class="text-5xl sm:text-6xl font-bold -mt-4 mb-1 mr-12 dark:text-white"
+            class="text-4xl sm:text-5xl sm:text-6xl font-bold -mt-4 mb-1 mr-12 text-white sm:text-black dark:text-black sm:dark:text-white"
           >
             <p class="my-2">Kevin</p>
             <p class="my-2">Tian</p>
           </div>
           <div class="">
-            <p class="text-2xl w-12 sm:w-72 font-bold text-rose-700">
+            <p class="text-xl sm:text-2xl w-12 sm:w-72 font-bold text-rose-700">
               Software Developer
             </p>
-            <p class="text-2xl w-48 md:w-96 mt-2 sm:mt-4 dark:text-white">
+            <p
+              class="text-xl sm:text-2xl w-48 md:w-96 mt-2 sm:mt-4 dark:text-white"
+            >
               Hi i'm Kevin - a developer, designer, and photographer
             </p>
           </div>

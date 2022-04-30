@@ -24,45 +24,55 @@ const darkMode = computed(() => {
     <div class="flex align-middle justify-center force-center">
       <div>
         <div class="flex flex-col md:flex-row">
-          <div class="w-60 h-48 lg:w-80 lg:h-64 bg-gray-100 mx-4 mb-2 md:mb-0">
+          <div
+            class="w-56 h-40 md:w-60 md:h-48 lg:w-80 lg:h-64 bg-gray-100 mx-4 mb-2 md:mb-0"
+          >
             <a href="https://ktimer.app" target="_blank">
               <img src="../assets/ktimer.png" alt="ktimer" />
               <div class="flex-col text-center justify-center mt-1 lg:mt-2">
                 <p class="text-base lg:text-2xl">KTimer</p>
-                <p class="text-sm lg:text-lg">Modern speedcubing timer</p>
+                <p class="hidden md:block text-sm lg:text-lg">
+                  Modern speedcubing timer
+                </p>
               </div>
             </a>
           </div>
-          <div class="mx-auto w-60 h-48 lg:w-80 lg:h-64 bg-gray-300">
+          <div
+            class="mx-auto w-56 h-40 md:w-60 md:h-48 lg:w-80 lg:h-64 bg-gray-300"
+          >
             <img
               class="mx-auto p-2 w-48 lg:w-60"
               src="../assets/undraw_1.svg"
               alt="undraw-1"
             />
             <div class="flex-col text-center justify-center mt-1 lg:mt-3">
-              <p class="text-base lg:text-2xl">Coming Soon</p>
+              <p class="hidden md:block text-base lg:text-2xl">Coming Soon</p>
             </div>
           </div>
         </div>
-        <div class="flex flex-col md:flex-row mt-2 sm:mt-4">
-          <div class="w-60 h-48 lg:w-80 lg:h-64 bg-gray-300 mx-4 mb-2 md:mb-0">
+        <div class="flex flex-col md:flex-row mt-2 md:mt-4">
+          <div
+            class="w-56 h-40 md:w-60 md:h-48 lg:w-80 lg:h-64 bg-gray-300 mx-4 mb-2 md:mb-0"
+          >
             <img
               class="w-44 lg:w-56 mx-auto p-2"
               src="../assets/undraw_2.svg"
               alt="undraw-2"
             />
             <div class="flex-col text-center justify-center mt-1 lg:mt-2">
-              <p class="text-base lg:text-2xl">Coming Soon</p>
+              <p class="hidden md:block text-base lg:text-2xl">Coming Soon</p>
             </div>
           </div>
-          <div class="mx-auto w-60 h-48 lg:w-80 lg:h-64 bg-gray-100">
+          <div
+            class="mx-auto w-56 h-40 md:w-60 md:h-48 lg:w-80 lg:h-64 bg-gray-100"
+          >
             <img
               class="w-48 lg:w-60 mx-auto p-2"
               src="../assets/undraw_3.svg"
               alt="undraw-3"
             />
             <div class="flex-col text-center justify-center mt-1 lg:mt-3">
-              <p class="text-base lg:text-2xl">Coming Soon</p>
+              <p class="hidden md:block text-base lg:text-2xl">Coming Soon</p>
             </div>
           </div>
         </div>
