@@ -66,7 +66,6 @@ watch(checked, () => {
         </div>
       </label>
     </div>
-    <Footer class="absolute bottom-0 dark:text-neutral-900" />
     <div
       class="flex flex-wrap md:flex-nowrap align-middle justify-center force-center container"
     >
@@ -97,6 +96,7 @@ watch(checked, () => {
         </div>
       </div>
     </div>
+    <Footer class="absolute bottom-0 dark:text-neutral-900" />
     <Header
       :pages="headerLinks"
       parent="Home"
