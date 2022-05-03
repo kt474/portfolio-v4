@@ -6,11 +6,11 @@ import SideNav from "./SideNav.vue";
 import { useStore } from "../store/store.js";
 import { onMounted, ref, watch } from "vue";
 const store = useStore();
-const checked = ref();
 const headerLinks = ["Home", "Projects", "About"];
 const systemDarkMode = window.matchMedia(
   "(prefers-color-scheme: dark)"
 ).matches;
+const checked = ref(systemDarkMode);
 
 onMounted(() => {
   if (systemDarkMode && !localStorage.darkMode) {
