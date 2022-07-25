@@ -112,7 +112,7 @@ input:checked ~ .dot {
   background-color: #be123c;
 }
 .background {
-  background: linear-gradient(to right, #be123c 40%, #fff 0%);
+  background: linear-gradient(to right, #be123c 40%, #f1f5f9 0%);
 }
 .dark-background {
   background: linear-gradient(to right, #be123c 40%, #1e1e1e 0%);
