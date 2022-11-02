@@ -146,6 +146,13 @@ input:checked ~ .dot {
     margin-bottom: 4rem;
   }
 }
+
+@media (min-width: 1536px){
+  .profile-img{
+    width: 425px !important;
+    margin-left: 17vw !important;
+  }
+}
 .profile-img {
   width: 375px;
   margin-left: 25vw;
