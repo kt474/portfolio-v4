@@ -90,7 +90,7 @@ watch(checked, () => {
             <p
               class="text-xl sm:text-2xl w-48 md:w-96 mt-0 sm:mt-4 dark:text-white"
             >
-              Hi i'm Kevin - a developer, designer, and photographer
+              Hi I'm Kevin - a developer, designer, and photographer
             </p>
           </div>
         </div>
@@ -147,8 +147,8 @@ input:checked ~ .dot {
   }
 }
 
-@media (min-width: 1536px){
-  .profile-img{
+@media (min-width: 1536px) {
+  .profile-img {
     width: 425px !important;
     margin-left: 17vw !important;
   }
