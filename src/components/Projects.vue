@@ -45,10 +45,7 @@ const darkMode = computed(() => {
           <div
             class="mx-auto w-56 h-40 md:w-60 md:h-48 lg:w-80 lg:h-64 bg-gray-300"
           >
-            <a
-              href="https://tailwind-converter-kt474.vercel.app/"
-              target="_blank"
-            >
+            <a href="https://tailwindconverter.app/" target="_blank">
               <img src="../assets/tailwind.png" alt="tailwind" />
               <div
                 class="flex-col text-center justify-center mt-1 lg:mt-3 overflow-hidden"
