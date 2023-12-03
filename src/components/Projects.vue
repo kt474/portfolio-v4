@@ -30,28 +30,38 @@ const darkMode = computed(() => {
         </p>
         <div class="flex flex-col md:flex-row">
           <div
-            class="w-56 h-40 md:w-60 md:h-48 lg:w-80 lg:h-64 bg-gray-300 mx-4 mb-2 md:mb-0"
+            class="w-56 h-40 md:w-60 md:h-48 lg:w-80 lg:h-64 mx-4 mb-2 md:mb-0 opacity-100 hover:opacity-60"
           >
             <a href="https://ktimer.app" target="_blank">
-              <img src="../assets/ktimer.png" alt="ktimer" />
-              <div class="flex-col text-center justify-center mt-1 lg:mt-2">
-                <p class="text-base lg:text-2xl">KTimer</p>
-                <p class="hidden md:block text-sm lg:text-lg">
+              <img src="../assets/509shots_so.png" alt="ktimer" width="400" />
+              <div
+                class="flex-col text-center justify-center lg:-mt-56 -mt-40 overflow-hidden h-52 hover:opacity-100 opacity-0 z-50"
+              >
+                <p
+                  class="text-xl lg:text-4xl lg:mb-1 text-black font-bold mt-10"
+                >
+                  KTimer
+                </p>
+                <p class="lg:text-xl text-sm text-black mt-4">
                   Modern speedcubing timer
                 </p>
               </div>
             </a>
           </div>
           <div
-            class="mx-auto w-56 h-40 md:w-60 md:h-48 lg:w-80 lg:h-64 bg-gray-300"
+            class="mx-auto w-56 h-40 md:w-60 md:h-48 lg:w-80 lg:h-64 opacity-100 hover:opacity-70"
           >
             <a href="https://tailwindconverter.app/" target="_blank">
-              <img src="../assets/tailwind.png" alt="tailwind" />
+              <img src="../assets/490shots_so.png" alt="tailwind" />
               <div
-                class="flex-col text-center justify-center mt-1 lg:mt-3 overflow-hidden"
+                class="flex-col text-center justify-center lg:-mt-52 -mt-40 overflow-hidden h-52 hover:opacity-100 opacity-0 z-50"
               >
-                <p class="text-base lg:text-2xl lg:mb-1">Tailwind Converter</p>
-                <p class="hidden md:block text-xs md:text-sm">
+                <p
+                  class="text-xl lg:text-3xl lg:mb-1 text-white font-bold mt-10"
+                >
+                  Tailwind Converter
+                </p>
+                <p class="lg:text-xl text-sm text-white">
                   Convert plain HTML/CSS into Tailwind
                 </p>
               </div>
