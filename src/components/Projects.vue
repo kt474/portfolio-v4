@@ -17,86 +17,48 @@ const darkMode = computed(() => {
 <template>
   <div
     id="Projects"
-    class="h-screen relative"
+    class="relative h-screen"
     :class="darkMode ? 'dark-background dark' : 'background'"
   >
-    <Footer class="hidden sm:block absolute bottom-0 dark:text-neutral-900" />
-    <div class="flex align-middle justify-center force-center">
+    <Footer class="absolute bottom-0 hidden sm:block dark:text-neutral-900" />
+    <div class="flex justify-center align-middle force-center">
       <div>
         <p
-          class="text-4xl sm:text-5xl font-bold mx-4 mb-3 sm:mb-12 dark:text-white"
+          class="mx-4 mb-3 text-4xl font-bold sm:text-5xl sm:mb-12 dark:text-white"
         >
           Projects
         </p>
         <div class="flex flex-col md:flex-row">
           <div
-            class="w-56 h-40 md:w-60 md:h-48 lg:w-80 lg:h-64 mx-4 mb-2 md:mb-0 opacity-100 hover:opacity-60"
+            class="w-56 h-40 mx-4 mb-2 opacity-100 md:w-60 md:h-48 lg:w-80 lg:h-64 md:mb-0 hover:opacity-60"
           >
             <a href="https://ktimer.app" target="_blank">
               <img src="../assets/509shots_so.png" alt="ktimer" width="400" />
-              <div
-                class="flex-col text-center justify-center lg:-mt-56 -mt-40 overflow-hidden h-52 hover:opacity-100 opacity-0 z-50"
-              >
-                <p
-                  class="text-xl lg:text-4xl lg:mb-1 text-black font-bold mt-10"
-                >
-                  KTimer
-                </p>
-                <p class="lg:text-xl text-sm text-black mt-4">
-                  Modern speedcubing timer
-                </p>
-              </div>
             </a>
           </div>
           <div
-            class="mx-auto w-56 h-40 md:w-60 md:h-48 lg:w-80 lg:h-64 opacity-100 hover:opacity-70"
+            class="w-56 h-40 mx-auto mt-4 opacity-100 md:w-60 md:h-48 lg:w-80 lg:h-64 hover:opacity-70 md:mt-0"
           >
             <a href="https://tailwindconverter.app/" target="_blank">
               <img src="../assets/490shots_so.png" alt="tailwind" />
-              <div
-                class="flex-col text-center justify-center lg:-mt-52 -mt-40 overflow-hidden h-52 hover:opacity-100 opacity-0 z-50"
-              >
-                <p
-                  class="text-xl lg:text-3xl lg:mb-1 text-white font-bold mt-10"
-                >
-                  Tailwind Converter
-                </p>
-                <p class="lg:text-xl text-sm text-white">
-                  Convert plain HTML/CSS into Tailwind
-                </p>
-              </div>
             </a>
           </div>
         </div>
-        <div class="flex flex-col md:flex-row mt-2 md:mt-4">
+        <div class="flex flex-col mt-2 md:flex-row md:mt-4">
           <div
-            class="w-56 h-40 md:w-60 md:h-48 lg:w-80 lg:h-64 bg-gray-300 mx-4 mb-2 md:mb-0"
+            class="w-56 h-40 mx-4 mt-4 mb-2 md:w-60 md:h-48 lg:w-80 lg:h-64 md:mb-0 md:-mt-3"
           >
-            <img
-              class="w-44 lg:w-56 mx-auto p-2"
-              src="../assets/undraw_2.svg"
-              alt="undraw-2"
-            />
-            <div class="flex-col text-center justify-center mt-1 lg:mt-2">
-              <p class="hidden md:block text-base lg:text-2xl">Coming Soon</p>
-            </div>
+            <img src="../assets/56shots_so.png" alt="undraw-2" />
           </div>
           <div
-            class="mx-auto w-56 h-40 md:w-60 md:h-48 lg:w-80 lg:h-64 bg-gray-300"
+            class="w-56 h-40 mx-auto mt-4 md:w-60 md:h-48 lg:w-80 lg:h-64 md:-mt-3"
           >
-            <img
-              class="w-48 lg:w-60 mx-auto p-2"
-              src="../assets/undraw_3.svg"
-              alt="undraw-3"
-            />
-            <div class="flex-col text-center justify-center mt-1 lg:mt-3">
-              <p class="hidden md:block text-base lg:text-2xl">Coming Soon</p>
-            </div>
+            <img src="../assets/56shots_so.png" alt="undraw-3" />
           </div>
         </div>
-        <div class="hidden sm:flex justify-center m-4 pb-2">
+        <div class="justify-center hidden pb-2 m-4 sm:flex">
           <button
-            class="bg-rose-600 hover:bg-rose-700 text-white font-bold py-2 px-4 rounded"
+            class="px-4 py-2 font-bold text-white rounded bg-rose-600 hover:bg-rose-700"
           >
             <a href="https://github.com/kt474?tab=repositories" target="_blank"
               >All Projects</a
