@@ -44,10 +44,10 @@ watch(checked, () => {
             class="sr-only"
           />
           <div
-            class="block bg-neutral-50 dark:bg-neutral-900 w-10 h-6 rounded-full"
+            class="block w-10 h-6 rounded-full bg-neutral-50 dark:bg-neutral-900"
           ></div>
           <div
-            class="dot absolute left-1 top-1 bg-rose-700 w-4 h-4 rounded-full transition"
+            class="absolute w-4 h-4 transition rounded-full dot left-1 top-1 bg-rose-700"
           ></div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -66,95 +66,98 @@ watch(checked, () => {
         </div>
       </label>
     </div>
-    <div
-      class="flex flex-wrap md:flex-nowrap align-middle justify-center force-center container"
-    >
-      <img class="profile-img" alt="profile" src="../assets/profile_pic.jpeg" />
-      <div class="flex align-middle justify-center main-text">
-        <div
-          class="hidden md:block w-28 lg:w-44 h-1.5 bg-rose-700 red-bar"
-        ></div>
-        <div class="flex flex-row md:flex-col ml-10 md:ml-0 -mt-4 lg:mt-0">
+    <div class="container flex justify-center align-middle force-center">
+      <img class="w-96" alt="profile" src="../assets/profile_pic.jpeg" />
+      <div class="flex justify-center align-middle main-text">
+        <div class="red-bar h-1.5 bg-rose-700"></div>
+        <div class="flex flex-row mt-4 ml-4 md:flex-col">
           <div
-            class="text-4xl sm:text-5xl sm:text-6xl font-bold -mt-4 mb-1 mr-12 text-white sm:text-black dark:text-black sm:dark:text-white"
+            class="mb-1 mr-12 -mt-4 text-4xl font-bold text-white sm:text-6xl sm:text-black dark:text-black sm:dark:text-white"
           >
             <p class="my-2">Kevin</p>
             <p class="my-2">Tian</p>
           </div>
           <div class="">
             <p
-              class="-mt-1 sm:mt-0 text-xl sm:text-2xl w-12 sm:w-72 font-bold text-rose-700"
+              class="w-12 -mt-1 text-xl font-bold sm:mt-0 sm:text-2xl sm:w-72 text-rose-700"
             >
               Software Developer
             </p>
-            <p
-              class="text-xl sm:text-2xl w-48 md:w-96 mt-0 sm:mt-4 dark:text-white"
-            >
-              Hi I'm Kevin - a developer, designer, and photographer
-            </p>
+            <div class="w-3/4 mt-0 text-xl sm:text-2xl sm:mt-4 dark:text-white">
+              <p class="">
+                I'm currently a developer at
+                <a
+                  href="https://www.ibm.com/quantum"
+                  target="_blank"
+                  class="bg-rose-100 hover:bg-rose-200 dark:bg-rose-700 dark:hover:bg-rose-800"
+                  >IBM Quantum</a
+                >
+                where my focus revolves around Qiskit - an open source quantum
+                computing toolkit.
+              </p>
+              <p class="mt-4">
+                In my free time, I've also created some websites which inlcude:
+                <a
+                  href="https://www.ktimer.app/"
+                  target="_blank"
+                  class="bg-rose-100 hover:bg-rose-200 dark:bg-rose-700 dark:hover:bg-rose-800"
+                  >KTimer</a
+                >,
+                <a
+                  href="https://tailwindconverter.app/"
+                  target="_blank"
+                  class="bg-rose-100 hover:bg-rose-200 dark:bg-rose-700 dark:hover:bg-rose-800"
+                  >Tailwindconverter</a
+                >, and
+                <a
+                  href="https://ffwrapped.com/"
+                  target="_blank"
+                  class="bg-rose-100 hover:bg-rose-200 dark:bg-rose-700 dark:hover:bg-rose-800"
+                  >ffwrapped</a
+                >. Most of my work is available on
+                <a
+                  href="https://github.com/kt474"
+                  target="_blank"
+                  class="bg-rose-100 hover:bg-rose-200 dark:bg-rose-700 dark:hover:bg-rose-800"
+                  >Github</a
+                >, so feel free to take a look.
+              </p>
+              <p class="mt-4">
+                Outside of programming, I enjoy taking photos, running, learning
+                Chinese, and
+                <a
+                  class="bg-rose-100 hover:bg-rose-200 dark:bg-rose-700 dark:hover:bg-rose-800"
+                  href="https://youtu.be/OfMvZr38v1o"
+                  target="_blank"
+                  >speedcubing</a
+                >.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <Footer class="absolute bottom-0 dark:text-neutral-900" />
-    <Header
-      :pages="headerLinks"
-      parent="Home"
-      class="absolute right-4 top-2 dark:text-white"
-    />
-    <SideNav parent="main" class="absolute right-4 side-nav" />
   </div>
 </template>
 
 <style scoped>
-input:checked ~ .dot {
-  transform: translateX(100%);
-  background-color: #be123c;
-}
 .background {
-  background: linear-gradient(to right, #be123c 40%, #f1f5f9 0%);
+  background: linear-gradient(to right, #be123c 30%, #f1f5f9 0%);
 }
 .dark-background {
-  background: linear-gradient(to right, #be123c 40%, #1e1e1e 0%);
+  background: linear-gradient(to right, #be123c 30%, #1e1e1e 0%);
 }
 
 .force-center {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-}
-.main-text {
-  margin-top: 8%;
-  margin-left: -7%;
+  left: 16.5%;
 }
 .red-bar {
-  margin-top: 26%;
-  margin-right: 3%;
-}
-.side-nav {
-  top: 45%;
-}
-@media (max-width: 1024px) {
-  .profile-img {
-    width: 275px !important;
-  }
-}
-@media only screen and (min-width: 834px) and (max-width: 1194px) {
-  .profile-img {
-    width: 325px !important;
-    margin-left: 34vw !important;
-    margin-bottom: 4rem;
-  }
-}
-
-@media (min-width: 1536px) {
-  .profile-img {
-    width: 425px !important;
-    margin-left: 17vw !important;
-  }
-}
-.profile-img {
-  width: 375px;
-  margin-left: 25vw;
+  width: 23rem;
+  margin-top: 18%;
+  margin-left: -9%;
 }
 </style>
