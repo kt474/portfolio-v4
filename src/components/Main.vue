@@ -67,23 +67,29 @@ watch(checked, () => {
       </label>
     </div>
     <div class="container flex justify-center align-middle force-center">
-      <img class="h-auto w-96" alt="profile" src="../assets/profile_pic.jpeg" />
+      <img
+        class="w-64 h-auto lg:w-96"
+        alt="profile"
+        src="../assets/profile_pic.jpeg"
+      />
       <div class="flex justify-center align-middle main-text">
         <div class="red-bar h-1.5 bg-rose-700"></div>
         <div class="flex flex-col ml-4 custom-margin-top">
           <div
-            class="mb-1 mr-12 text-4xl font-bold text-white sm:text-6xl sm:text-black dark:text-black sm:dark:text-white"
+            class="mb-1 mr-12 text-4xl font-bold text-black lg:text-5xl xl:text-6xl dark:text-white"
           >
             <p class="my-2">Kevin</p>
             <p class="my-2">Tian</p>
           </div>
           <div class="">
             <p
-              class="w-12 text-xl font-bold sm:mt-0 sm:text-2xl sm:w-72 text-rose-700"
+              class="w-12 text-lg font-bold sm:mt-0 lg:text-xl xl:text-2xl sm:w-72 text-rose-700"
             >
               Software Developer
             </p>
-            <div class="w-3/4 mt-0 text-xl sm:text-2xl sm:mt-4 dark:text-white">
+            <div
+              class="w-3/4 mt-0 text-xl xl:text-2xl lg:mt-2 xl:mt-4 dark:text-white"
+            >
               <p class="">
                 I'm currently a developer at
                 <a
@@ -95,7 +101,7 @@ watch(checked, () => {
                 where my focus revolves around Qiskit - an open source quantum
                 computing toolkit.
               </p>
-              <p class="mt-4">
+              <p class="mt-2 xl:mt-4">
                 In my free time, I've also created some websites which inlcude:
                 <a
                   href="https://www.ktimer.app/"
@@ -122,7 +128,7 @@ watch(checked, () => {
                   >Github</a
                 >, so feel free to take a look.
               </p>
-              <p class="mt-4">
+              <p class="mt-2 xl:mt-4">
                 Outside of programming, I enjoy taking photos, running, learning
                 Chinese, and
                 <a
@@ -165,11 +171,23 @@ watch(checked, () => {
     margin-top: 2rem;
   }
 }
+@media (max-width: 1280px) {
+  .custom-margin-top {
+    margin-top: 2rem;
+  }
+}
 @media (min-width: 1536px) {
   .red-bar {
     width: 19rem;
     margin-top: 16.8%;
     margin-left: -7%;
+  }
+}
+@media (max-width: 1280px) {
+  .red-bar {
+    width: 26rem;
+    margin-top: 23.3%;
+    margin-left: -11%;
   }
 }
 @media (min-width: 1536px) {
