@@ -34,7 +34,7 @@ watch(checked, () => {
     class="h-screen"
     :class="store.darkMode ? 'dark-background dark' : 'background'"
   >
-    <div class="absolute top-3 left-3.5">
+    <div class="absolute top-3 left-3.5 hidden sm:block">
       <label for="toggleB" class="flex items-center cursor-pointer">
         <div class="relative">
           <input
@@ -66,14 +66,18 @@ watch(checked, () => {
         </div>
       </label>
     </div>
-    <div class="container flex justify-center align-middle force-center">
+    <div
+      class="container flex flex-col justify-center align-middle md:flex-row force-center"
+    >
       <img
-        class="h-auto w-72 lg:w-80 xl:w-96"
+        class="w-64 h-auto md:w-72 lg:w-80 xl:w-96"
         alt="profile"
         src="../assets/profile_pic.jpeg"
       />
-      <div class="flex justify-center align-middle main-text">
-        <div class="red-bar h-1.5 bg-rose-700"></div>
+      <div
+        class="flex justify-center ml-16 align-middle sm:ml-24 main-text md:ml-0"
+      >
+        <div class="hidden md:block red-bar h-1.5 bg-rose-700"></div>
         <div class="flex flex-col ml-4 custom-margin-top">
           <div
             class="mb-1 mr-12 text-4xl font-bold text-black lg:text-5xl xl:text-6xl dark:text-white"
@@ -202,6 +206,14 @@ watch(checked, () => {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    left: 18.5%;
+  }
+}
+@media (max-width: 640px) {
+  .force-center {
+    position: relative;
+    top: 0%;
+    transform: translateY(0%);
     left: 18.5%;
   }
 }
