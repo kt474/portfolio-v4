@@ -31,7 +31,7 @@ watch(checked, () => {
 <template>
   <div
     id="Home"
-    class="h-screen"
+    class="h-screen overflow-x-hidden"
     :class="store.darkMode ? 'dark-background dark' : 'background'"
   >
     <div class="absolute top-3 left-3.5 hidden sm:block">
