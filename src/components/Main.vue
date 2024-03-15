@@ -68,7 +68,7 @@ watch(checked, () => {
     </div>
     <div class="container flex justify-center align-middle force-center">
       <img
-        class="w-64 h-auto lg:w-96"
+        class="h-auto w-72 lg:w-80 xl:w-96"
         alt="profile"
         src="../assets/profile_pic.jpeg"
       />
@@ -88,7 +88,7 @@ watch(checked, () => {
               Software Developer
             </p>
             <div
-              class="w-3/4 mt-0 text-xl xl:text-2xl lg:mt-2 xl:mt-4 dark:text-white"
+              class="w-3/4 mt-0 text-lg lg:text-xl xl:text-2xl lg:mt-2 xl:mt-4 dark:text-white"
             >
               <p class="">
                 I'm currently a developer at
@@ -164,7 +164,7 @@ watch(checked, () => {
 .red-bar {
   width: 22rem;
   margin-top: 18%;
-  margin-left: -5%;
+  margin-left: -8%;
 }
 @media (min-width: 1536px) {
   .custom-margin-top {
@@ -173,7 +173,7 @@ watch(checked, () => {
 }
 @media (max-width: 1280px) {
   .custom-margin-top {
-    margin-top: 2rem;
+    margin-top: 0rem;
   }
 }
 @media (min-width: 1536px) {
@@ -186,8 +186,15 @@ watch(checked, () => {
 @media (max-width: 1280px) {
   .red-bar {
     width: 26rem;
-    margin-top: 23.3%;
+    margin-top: 18.9%;
     margin-left: -11%;
+  }
+}
+@media (max-width: 1024px) {
+  .red-bar {
+    width: 17rem;
+    margin-top: 21%;
+    margin-left: -8%;
   }
 }
 @media (min-width: 1536px) {
