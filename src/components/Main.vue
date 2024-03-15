@@ -70,7 +70,7 @@ watch(checked, () => {
       class="container flex flex-col justify-center align-middle md:flex-row force-center"
     >
       <img
-        class="w-64 h-auto md:w-72 lg:w-80 xl:w-96"
+        class="w-64 h-auto md:w-80 xl:w-96"
         alt="profile"
         src="../assets/profile_pic.jpeg"
       />
@@ -82,8 +82,8 @@ watch(checked, () => {
           <div
             class="mb-1 mr-12 text-4xl font-bold text-black lg:text-5xl xl:text-6xl dark:text-white"
           >
-            <p class="my-2">Kevin</p>
-            <p class="my-2">Tian</p>
+            <p class="my-1 lg:my-2">Kevin</p>
+            <p class="my-1 g:my-2">Tian</p>
           </div>
           <div class="">
             <p
@@ -167,7 +167,7 @@ watch(checked, () => {
 }
 .red-bar {
   width: 22rem;
-  margin-top: 18%;
+  margin-top: 17.7%;
   margin-left: -8%;
 }
 @media (min-width: 1536px) {
@@ -183,21 +183,21 @@ watch(checked, () => {
 @media (min-width: 1536px) {
   .red-bar {
     width: 19rem;
-    margin-top: 16.8%;
+    margin-top: 16.5%;
     margin-left: -7%;
   }
 }
 @media (max-width: 1280px) {
   .red-bar {
     width: 26rem;
-    margin-top: 18.9%;
+    margin-top: 18.3%;
     margin-left: -11%;
   }
 }
 @media (max-width: 1024px) {
   .red-bar {
     width: 17rem;
-    margin-top: 21%;
+    margin-top: 18.8%;
     margin-left: -8%;
   }
 }
