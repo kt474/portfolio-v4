@@ -38,6 +38,7 @@ watch(checked, () => {
       <label for="toggleB" class="flex items-center cursor-pointer">
         <div class="relative">
           <input
+            aria-labelledby="toggle dark mode"
             v-model="checked"
             type="checkbox"
             id="toggleB"
