@@ -37,33 +37,40 @@ watch(checked, () => {
     <div class="absolute top-3 left-3.5 hidden sm:block">
       <label for="toggleB" class="flex items-center cursor-pointer">
         <div class="relative">
-          <input
-            aria-labelledby="toggle dark mode"
-            v-model="checked"
-            type="checkbox"
-            id="toggleB"
-            class="sr-only"
-          />
-          <div
-            class="block w-10 h-6 rounded-full bg-neutral-50 dark:bg-neutral-900"
-          ></div>
-          <div
-            class="absolute w-4 h-4 transition rounded-full dot left-1 top-1 bg-rose-700"
-          ></div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6 absolute left-12 -top-0.5"
-            fill="none"
-            viewBox="0 0 24 24"
-            :stroke="store.darkMode ? '#171717' : '#fff'"
-            stroke-width="2"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-            />
-          </svg>
+          <button @click="checked = !checked">
+            <svg
+              v-if="store.darkMode"
+              class="h-6 w-6 absolute -top-0.5 hover:fill-black"
+              fill="none"
+              viewBox="0 0 24 24"
+              :stroke="store.darkMode ? '#fff' : '#171717'"
+              stroke-width="2"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 3V4M12 20V21M4 12H3M6.31412 6.31412L5.5 5.5M17.6859 6.31412L18.5 5.5M6.31412 17.69L5.5 18.5001M17.6859 17.69L18.5 18.5001M21 12H20M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z"
+                stroke="#000000"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <svg
+              v-else
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 absolute -top-0.5 hover:fill-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              :stroke="store.darkMode ? '#171717' : '#fff'"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+              />
+            </svg>
+          </button>
         </div>
       </label>
     </div>
