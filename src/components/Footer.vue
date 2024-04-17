@@ -58,26 +58,26 @@ const store = useStore();
             title="Github"
         /></a>
         <a
-          aria-label="Instagram"
-          class="px-1"
-          href="https://www.instagram.com/kevkevkt/"
+          aria-label="Twitter"
+          class="px-1 -mt-0.5"
+          href="https://twitter.com/kevkevkt"
           target="_blank"
         >
           <img
             v-if="store.darkMode"
-            src="../assets/instagram_dark.svg"
+            src="../assets/twitterx_dark.svg"
             alt=""
-            width="24"
-            height="24"
-            title="Instagram"
+            width="28"
+            height="28"
+            title="Twitter"
           />
           <img
             v-else
-            src="../assets/instagram_icon.svg"
+            src="../assets/twitterx.svg"
             alt=""
-            width="24"
-            height="24"
-            title="Instagram"
+            width="28"
+            height="28"
+            title="Twitter"
           />
         </a>
       </div>
