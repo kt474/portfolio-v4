@@ -169,8 +169,8 @@ watch(checked, () => {
 
 .force-center {
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 48%;
+  transform: translateY(-48%);
   left: 16.5%;
 }
 .red-bar {
