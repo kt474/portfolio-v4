@@ -14,10 +14,10 @@ const store = useStore();
     </div>
     <div class="m-0 mt-6 md:m-2">
       <p class="font-bold tracking-wide text-md md:text-2xl">Socials</p>
-      <div class="flex justify-start w-40 my-1 sm:justify-between">
+      <div class="flex justify-start w-40 my-1">
         <a
           aria-label="Linkedin"
-          class="pr-1"
+          class="pr-1 mr-8 sm:mr-12"
           href="https://www.linkedin.com/in/kt474/"
           target="_blank"
           ><img
@@ -57,29 +57,6 @@ const store = useStore();
             height="24"
             title="Github"
         /></a>
-        <a
-          aria-label="Twitter"
-          class="px-1 -mt-0.5"
-          href="https://twitter.com/kevkevkt"
-          target="_blank"
-        >
-          <img
-            v-if="store.darkMode"
-            src="../assets/twitterx_dark.svg"
-            alt=""
-            width="28"
-            height="28"
-            title="Twitter"
-          />
-          <img
-            v-else
-            src="../assets/twitterx.svg"
-            alt=""
-            width="28"
-            height="28"
-            title="Twitter"
-          />
-        </a>
       </div>
     </div>
   </div>
