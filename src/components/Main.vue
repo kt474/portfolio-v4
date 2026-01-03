@@ -1,12 +1,9 @@
 <script setup lang="ts">
 import Footer from "./Footer.vue";
-import Header from "./Header.vue";
-import SideNav from "./SideNav.vue";
 // @ts-ignore
 import { useStore } from "../store/store.js";
 import { onMounted, ref, watch } from "vue";
 const store = useStore();
-const headerLinks = ["Home", "Projects", "About"];
 const systemDarkMode = window.matchMedia(
   "(prefers-color-scheme: dark)"
 ).matches;
@@ -75,82 +72,72 @@ watch(checked, () => {
       </label>
     </div>
     <div
-      class="container flex flex-col justify-center align-middle md:flex-row force-center"
+      class="fixed sm:top-[15%] right-[-1%] md:right-[0%] lg:right-[4%] xl:right-[5%] z-50 max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-4xl p-6 ml-28 sm:ml-0"
     >
-      <img
-        class="w-64 h-auto md:w-80 xl:w-96"
-        alt="profile"
-        src="../assets/profile_pic.jpeg"
-      />
-      <div
-        class="flex justify-center ml-16 align-middle sm:ml-24 main-text md:ml-0"
-      >
-        <div class="hidden md:block red-bar h-1.5 bg-rose-700"></div>
-        <div class="flex flex-col ml-4 custom-margin-top">
-          <div
-            class="mb-1 mr-12 text-4xl font-bold text-black lg:text-5xl xl:text-6xl dark:text-white"
+      <div class="">
+        <div
+          class="mb-1 mr-12 text-4xl font-bold text-black lg:text-5xl xl:text-6xl dark:text-white"
+        >
+          <p class="my-1 lg:my-2">Kevin</p>
+          <p class="my-1 g:my-2">Tian</p>
+        </div>
+        <div class="">
+          <p
+            class="w-12 text-lg font-bold sm:mt-2 lg:text-xl xl:text-2xl sm:w-72 text-rose-700"
           >
-            <p class="my-1 lg:my-2">Kevin</p>
-            <p class="my-1 g:my-2">Tian</p>
-          </div>
-          <div class="">
-            <p
-              class="w-12 text-lg font-bold sm:mt-0 lg:text-xl xl:text-2xl sm:w-72 text-rose-700"
-            >
-              Software Developer
+            Software Engineer
+          </p>
+          <div
+            class="w-full mt-0 text-base sm:w-3/4 sm:text-lg lg:text-xl xl:text-2xl lg:mt-2 xl:mt-4 dark:text-white"
+          >
+            <p class="">
+              I'm currently a developer at
+              <a
+                href="https://www.ibm.com/quantum"
+                target="_blank"
+                class="bg-rose-100 hover:bg-rose-200 dark:bg-rose-700 dark:hover:bg-rose-800"
+                >IBM Quantum</a
+              >
+              where my focus revolves around Qiskit - an open source quantum
+              computing toolkit.
             </p>
-            <div
-              class="w-3/4 mt-0 text-lg lg:text-xl xl:text-2xl lg:mt-2 xl:mt-4 dark:text-white"
-            >
-              <p class="">
-                I'm currently a developer at
-                <a
-                  href="https://www.ibm.com/quantum"
-                  target="_blank"
-                  class="bg-rose-100 hover:bg-rose-200 dark:bg-rose-700 dark:hover:bg-rose-800"
-                  >IBM Quantum</a
-                >
-                where my focus revolves around Qiskit - an open source quantum
-                computing toolkit.
-              </p>
-              <p class="mt-2 xl:mt-4">
-                In my free time, I've also created some websites which inlcude:
-                <a
-                  href="https://www.ktimer.app/"
-                  target="_blank"
-                  class="bg-rose-100 hover:bg-rose-200 dark:bg-rose-700 dark:hover:bg-rose-800"
-                  >KTimer</a
-                >,
-                <a
-                  href="https://tailwindconverter.app/"
-                  target="_blank"
-                  class="bg-rose-100 hover:bg-rose-200 dark:bg-rose-700 dark:hover:bg-rose-800"
-                  >Tailwindconverter</a
-                >, and
-                <a
-                  href="https://ffwrapped.com/"
-                  target="_blank"
-                  class="bg-rose-100 hover:bg-rose-200 dark:bg-rose-700 dark:hover:bg-rose-800"
-                  >ffwrapped</a
-                >. Most of my work is available on
-                <a
-                  href="https://github.com/kt474"
-                  target="_blank"
-                  class="bg-rose-100 hover:bg-rose-200 dark:bg-rose-700 dark:hover:bg-rose-800"
-                  >Github</a
-                >, so feel free to take a look.
-              </p>
-              <p class="mt-2 xl:mt-4">
-                Outside of programming, I enjoy taking photos, running, learning
-                Chinese, and
-                <a
-                  class="bg-rose-100 hover:bg-rose-200 dark:bg-rose-700 dark:hover:bg-rose-800"
-                  href="https://youtu.be/OfMvZr38v1o"
-                  target="_blank"
-                  >speedcubing</a
-                >.
-              </p>
-            </div>
+            <p class="mt-2 xl:mt-4">
+              In my free time, I've also created some apps which inlcude:
+              <a
+                href="https://www.ktimer.app/"
+                target="_blank"
+                class="bg-rose-100 hover:bg-rose-200 dark:bg-rose-700 dark:hover:bg-rose-800"
+                >KTimer</a
+              >,
+              <a
+                href="https://tailwindconverter.app/"
+                target="_blank"
+                class="bg-rose-100 hover:bg-rose-200 dark:bg-rose-700 dark:hover:bg-rose-800"
+                >Tailwindconverter</a
+              >, and
+              <a
+                href="https://ffwrapped.com/"
+                target="_blank"
+                class="bg-rose-100 hover:bg-rose-200 dark:bg-rose-700 dark:hover:bg-rose-800"
+                >ffwrapped</a
+              >. Most of my work is open source and available on
+              <a
+                href="https://github.com/kt474"
+                target="_blank"
+                class="bg-rose-100 hover:bg-rose-200 dark:bg-rose-700 dark:hover:bg-rose-800"
+                >Github</a
+              >, so feel free to take a look.
+            </p>
+            <p class="mt-2 xl:mt-4">
+              Outside of programming, I enjoy taking photos, running, learning
+              Chinese, and
+              <a
+                class="bg-rose-100 hover:bg-rose-200 dark:bg-rose-700 dark:hover:bg-rose-800"
+                href="https://youtu.be/OfMvZr38v1o"
+                target="_blank"
+                >speedcubing</a
+              >.
+            </p>
           </div>
         </div>
       </div>
@@ -165,64 +152,5 @@ watch(checked, () => {
 }
 .dark-background {
   background: linear-gradient(to right, #be123c 30%, #1e1e1e 0%);
-}
-
-.force-center {
-  position: relative;
-  top: 48%;
-  transform: translateY(-48%);
-  left: 16.5%;
-}
-.red-bar {
-  width: 22rem;
-  margin-top: 17.7%;
-  margin-left: -8%;
-}
-@media (min-width: 1536px) {
-  .custom-margin-top {
-    margin-top: 2rem;
-  }
-}
-@media (max-width: 1280px) {
-  .custom-margin-top {
-    margin-top: 0rem;
-  }
-}
-@media (min-width: 1536px) {
-  .red-bar {
-    width: 19rem;
-    margin-top: 16.5%;
-    margin-left: -7%;
-  }
-}
-@media (max-width: 1280px) {
-  .red-bar {
-    width: 26rem;
-    margin-top: 18.3%;
-    margin-left: -11%;
-  }
-}
-@media (max-width: 1024px) {
-  .red-bar {
-    width: 17rem;
-    margin-top: 18.8%;
-    margin-left: -8%;
-  }
-}
-@media (min-width: 1536px) {
-  .force-center {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 18.5%;
-  }
-}
-@media (max-width: 640px) {
-  .force-center {
-    position: relative;
-    top: 0%;
-    transform: translateY(0%);
-    left: 18.5%;
-  }
 }
 </style>
