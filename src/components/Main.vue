@@ -95,9 +95,9 @@ watch(checked, () => {
           </div>
           <div class="">
             <p
-              class="w-12 text-lg font-bold sm:mt-0 lg:text-xl xl:text-2xl sm:w-72 text-rose-700"
+              class="text-lg font-bold sm:text-lg sm:mt-0 lg:text-xl xl:text-2xl sm:w-72 text-rose-700"
             >
-              Software Developer
+              Software Engineer
             </p>
             <div
               class="w-3/4 mt-0 text-lg lg:text-xl xl:text-2xl lg:mt-2 xl:mt-4 dark:text-white"
@@ -114,7 +114,7 @@ watch(checked, () => {
                 computing toolkit.
               </p>
               <p class="mt-2 xl:mt-4">
-                In my free time, I've also created some websites which inlcude:
+                In my free time, I've also created some apps which inlcude:
                 <a
                   href="https://www.ktimer.app/"
                   target="_blank"
@@ -132,7 +132,7 @@ watch(checked, () => {
                   target="_blank"
                   class="bg-rose-100 hover:bg-rose-200 dark:bg-rose-700 dark:hover:bg-rose-800"
                   >ffwrapped</a
-                >. Most of my work is available on
+                >. Most of my work is open source and available on
                 <a
                   href="https://github.com/kt474"
                   target="_blank"
